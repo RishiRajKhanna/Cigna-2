@@ -1,0 +1,185 @@
+--- Patient Clustering Analysis ---
+
+=========================================
+          CLUSTER: NORTH
+=========================================
+Total Patients in Cluster: 970
+
+--- General Patient Characteristics ---
+Average Age: 56.1 years
+Average Annual Salary: $79,567.42
+Average Number of Children: 2.34
+
+--- Demographics ---
+Gender Distribution:
+gender
+Female    51.1
+Male      48.9
+
+Ethnicity Distribution:
+ethnicity
+White                                        60.5
+Hispanic                                     18.8
+Black                                        12.0
+Asian                                         6.0
+Two or More Races                             1.3
+American Indian or Alaska Native              1.2
+Native Hawaiian or Other Pacific Islander     0.2
+
+Marital Status (Most Common): Single
+College Degree Holders: 51.8%
+
+--- Health Profile ---
+Most Common Medical Conditions:
+medical_history
+Depression      298
+None            287
+Hypertension    284
+
+Most Common Drug Needs: Painkillers
+
+--- Average Distance to Nearest Pharmacy (by County) ---
+us_county
+Albany County         12.37
+Allegany County       13.92
+Bronx County          12.75
+Broome County         12.31
+Cattaraugus County    12.96
+
+=========================================
+          CLUSTER: WEST
+=========================================
+Total Patients in Cluster: 986
+
+--- General Patient Characteristics ---
+Average Age: 57.7 years
+Average Annual Salary: $75,307.84
+Average Number of Children: 2.45
+
+--- Demographics ---
+Gender Distribution:
+gender
+Male      53.1
+Female    46.9
+
+Ethnicity Distribution:
+ethnicity
+White                                        56.9
+Hispanic                                     19.0
+Black                                        14.7
+Asian                                         6.6
+Two or More Races                             1.8
+American Indian or Alaska Native              0.8
+Native Hawaiian or Other Pacific Islander     0.2
+
+Marital Status (Most Common): Widowed
+College Degree Holders: 51.8%
+
+--- Health Profile ---
+Most Common Medical Conditions:
+medical_history
+Asthma              317
+High Cholesterol    284
+Depression          282
+
+Most Common Drug Needs: Antidepressants
+
+--- Average Distance to Nearest Pharmacy (by County) ---
+us_county
+Calaveras County      12.65
+Kings County          13.05
+Los Angeles County    13.16
+Marin County          12.25
+Placer County         12.74
+
+=========================================
+          CLUSTER: SOUTH
+=========================================
+Total Patients in Cluster: 1005
+
+--- General Patient Characteristics ---
+Average Age: 55.1 years
+Average Annual Salary: $74,631.49
+Average Number of Children: 2.43
+
+--- Demographics ---
+Gender Distribution:
+gender
+Female    50.2
+Male      49.8
+
+Ethnicity Distribution:
+ethnicity
+White                                        56.4
+Hispanic                                     19.9
+Black                                        13.6
+Asian                                         6.6
+Two or More Races                             2.0
+American Indian or Alaska Native              1.1
+Native Hawaiian or Other Pacific Islander     0.4
+
+Marital Status (Most Common): Widowed
+College Degree Holders: 50.3%
+
+--- Health Profile ---
+Most Common Medical Conditions:
+medical_history
+Depression    314
+Diabetes      301
+Arthritis     293
+
+Most Common Drug Needs: Statins
+
+--- Average Distance to Nearest Pharmacy (by County) ---
+us_county
+Alachua County     12.28
+Baker County       13.04
+Bay County         13.04
+Bradford County    12.54
+Brevard County     12.53
+
+=========================================
+          CLUSTER: CENTRAL
+=========================================
+Total Patients in Cluster: 1026
+
+--- General Patient Characteristics ---
+Average Age: 57.1 years
+Average Annual Salary: $76,895.17
+Average Number of Children: 2.40
+
+--- Demographics ---
+Gender Distribution:
+gender
+Male      51.0
+Female    49.0
+
+Ethnicity Distribution:
+ethnicity
+White                                        57.7
+Hispanic                                     21.8
+Black                                        12.8
+Asian                                         4.7
+American Indian or Alaska Native              1.4
+Two or More Races                             1.1
+Native Hawaiian or Other Pacific Islander     0.6
+
+Marital Status (Most Common): Married
+College Degree Holders: 49.7%
+
+--- Health Profile ---
+Most Common Medical Conditions:
+medical_history
+Diabetes        312
+Hypertension    310
+Depression      308
+
+Most Common Drug Needs: Blood Pressure Medication
+
+--- Average Distance to Nearest Pharmacy (by County) ---
+us_county
+Adams County        13.91
+Alexander County    13.06
+Bond County         12.55
+Boone County        11.10
+Brown County        13.31

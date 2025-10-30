@@ -1,0 +1,203 @@
+county,desert_population,suggested_latitude,suggested_longitude
+"Washington, Vermont",43090,38.5545,-89.1732
+"Lincoln, Wyoming",24192,39.4371,-97.3851
+"Washington, Maine",19592,38.5545,-89.1732
+"Franklin, Vermont",15158,38.3477,-87.2271
+"Franklin, Maine",15002,38.3477,-87.2271
+"Lincoln, Maine",14904,39.4371,-97.3851
+"Johnson, Wyoming",14520,37.9695,-91.3514
+"Jefferson, Kansas",10946,38.3322,-92.8279
+"Franklin, Nebraska",10322,38.3477,-87.2271
+"Franklin, Kansas",10218,38.3477,-87.2271
+"Essex, Vermont",7330,42.0495,-73.5319
+"Clay, Mississippi",7308,37.5633,-89.8915
+"Clay, Iowa",7038,37.5633,-89.8915
+"Clay, Kansas",6858,37.5633,-89.8915
+"Marion, Iowa",6766,36.8054,-89.6736
+"Washington, Iowa",6510,38.5545,-89.1732
+"Marion, Mississippi",6477,36.8054,-89.6736
+"Washington, Nebraska",6076,38.5545,-89.1732
+"Washington, Kansas",6045,38.5545,-89.1732
+"Custer, Montana",5922,41.5522,-104.5666
+"Grant, South Dakota",5895,40.3467,-97.8172
+"Grant, North Dakota",5775,40.3467,-97.8172
+"Washington, Mississippi",5518,38.5545,-89.1732
+"Lake, Montana",5376,41.244,-97.1482
+"Knox, Maine",5319,39.2665,-87.42
+"Jefferson, Iowa",5278,38.3322,-92.8279
+"Johnson, Kansas",5196,37.9695,-91.3514
+"Lincoln, Kansas",5040,39.4371,-97.3851
+"Lincoln, South Dakota",5040,39.4371,-97.3851
+"Jefferson, Nebraska",4888,38.3322,-92.8279
+"Adams, Nebraska",4860,41.1916,-96.085
+"Somerset, Maine",4812,41.0409,-74.8406
+"Douglas, Kansas",4716,41.2996,-100.8393
+"Lee, Mississippi",4668,34.7222,-86.2345
+"Jackson, Mississippi",4560,37.6221,-91.563
+"Jackson, South Dakota",4512,37.6221,-91.563
+"Lake, South Dakota",4392,41.244,-97.1482
+"Jackson, Kansas",4392,37.6221,-91.563
+"Logan, Kansas",4290,39.4005,-93.7325
+"Union, Mississippi",4194,37.4258,-88.6428
+"Carter, Montana",4105,38.2639,-91.5925
+"Logan, North Dakota",4040,39.4005,-93.7325
+"Madison, Nebraska",4000,37.5261,-89.9247
+"Sheridan, North Dakota",3945,44.5884,-102.9162
+"Hamilton, Iowa",3940,37.9649,-89.3375
+"Campbell, Wyoming",3865,40.515,-90.6451
+"Marion, Kansas",3842,36.8054,-89.6736
+"Clay, Nebraska",3780,37.5633,-89.8915
+"Union, South Dakota",3780,37.4258,-88.6428
+"Custer, South Dakota",3762,41.5522,-104.5666
+"Clay, South Dakota",3762,37.5633,-89.8915
+"Garfield, Montana",3642,41.5762,-106.7762
+"Union, Iowa",3600,37.4258,-88.6428
+"Grant, Nebraska",3495,40.3467,-97.8172
+"Sheridan, Wyoming",3175,44.5884,-102.9162
+"Wayne, Iowa",3008,38.3337,-86.6506
+"Orange, Vermont",2992,36.3243,-85.4112
+"Richland, North Dakota",2870,40.4793,-90.747
+"Richland, Montana",2674,40.4793,-90.747
+"Carroll, Mississippi",2639,38.6827,-85.9249
+"Scott, Kansas",2486,38.0776,-89.6498
+"Nelson, North Dakota",2412,41.1714,-87.515
+"Douglas, South Dakota",2292,41.2996,-100.8393
+"Garfield, Nebraska",2286,41.5762,-106.7762
+"Douglas, Nebraska",2280,41.2996,-100.8393
+"Johnson, Nebraska",2244,37.9695,-91.3514
+"Scott, Mississippi",2233,38.0776,-89.6498
+"Crawford, Kansas",2145,39.4161,-88.4133
+"Knox, Nebraska",2097,39.2665,-87.42
+"Dallas, Iowa",2045,35.6856,-92.7203
+"Logan, Nebraska",1910,39.4005,-93.7325
+"Sheridan, Montana",1905,44.5884,-102.9162
+"Blaine, Montana",1864,42.4082,-105.3371
+"Gray, Kansas",1682,36.5697,-100.6254
+"Sherman, Nebraska",1648,40.5637,-105.8196
+"Yukon-Koyukuk Census Area, Alaska",1639,35.1026,-97.38
+"Niobrara, Wyoming",1638,43.0562,-104.4756
+"Harding, South Dakota",1614,40.7191,-103.6574
+"Albany, Wyoming",1604,42.1272,-89.8485
+"Van Buren, Iowa",1592,38.5704,-88.9846
+"Carbon, Wyoming",1576,41.8719,-100.5641
+"Liberty, Montana",1508,35.1955,-93.0538
+"Fremont, Wyoming",1464,41.622,-105.2893
+"Sweetwater, Wyoming",1410,41.6598,-108.8794
+"Northwest Arctic Borough, Alaska",1385,40.1712,-95.833
+"Sioux, Iowa",1275,43.8945,-100.3257
+"Teton, Wyoming",1242,45.1772,-111.3461
+"Burke, North Dakota",1239,39.2004,-88.7413
+"Wright, Iowa",1239,41.7259,-93.3893
+"Buffalo, South Dakota",1239,43.1038,-96.6782
+"Osceola, Iowa",1236,38.477,-87.3663
+"Park, Montana",1203,43.0431,-108.6103
+"Butte, South Dakota",1200,42.7651,-112.7601
+"Sioux, North Dakota",1191,43.8945,-100.3257
+"Jones, Iowa",1188,36.4153,-90.2975
+"Steele, North Dakota",1168,45.7393,-95.4755
+"Platte, Wyoming",1158,41.0281,-99.0869
+"Lafayette, Mississippi",1146,34.9194,-90.3756
+"Crook, Wyoming",1144,44.3654,-112.4635
+"Weston, Wyoming",1033,43.8403,-104.5674
+"Campbell, South Dakota",1000,40.515,-90.6451
+"Aleutians East Borough, Alaska",983,35.0972,-105.8714
+"Natrona, Wyoming",981,42.9619,-106.7989
+"Converse, Wyoming",964,42.9723,-105.5077
+"Carbon, Montana",840,41.8719,-100.5641
+"Prince of Wales-Hyder Census Area, Alaska",838,37.1133,-92.38
+"Linn, Kansas",836,41.1627,-100.5206
+"Hot Springs, Wyoming",835,43.719,-108.4423
+"Kusilvak Census Area, Alaska",831,37.2107,-96.1274
+"Dawson, Nebraska",816,38.8307,-97.7094
+"Blaine, Nebraska",816,42.4082,-105.3371
+"Hutchinson, South Dakota",814,39.5874,-99.5546
+"Lake and Peninsula Borough, Alaska",808,38.4141,-88.7393
+"Washakie, Wyoming",805,43.9044,-107.6823
+"Eddy, North Dakota",798,40.0945,-101.603
+"Linn, Iowa",792,41.1627,-100.5206
+"Perkins, Nebraska",784,43.1705,-102.0624
+"Powell, Montana",776,42.3435,-98.3796
+"Roberts, South Dakota",774,40.7339,-98.8797
+"Harlan, Nebraska",772,38.5168,-91.3109
+"Laramie, Wyoming",771,41.3071,-104.6892
+"Wells, North Dakota",764,44.1584,-92.4411
+"Wheeler, Nebraska",760,38.5396,-100.3874
+"Pennington, South Dakota",756,46.0353,-99.4301
+"Walworth, South Dakota",748,44.0492,-94.2865
+"Kiowa, Kansas",699,36.9691,-100.3351
+"Edwards, Kansas",678,35.4289,-95.8903
+"Park, Wyoming",678,43.0431,-108.6103
+"Keya Paha, Nebraska",651,42.8788,-99.7121
+"Sitka City and Borough, Alaska",647,39.0302,-94.6419
+"Beaverhead, Montana",646,45.1326,-112.899
+"Piscataquis, Maine",633,45.8379,-69.2844
+"Petersburg Borough, Alaska",633,36.8631,-103.616
+"Valley, Montana",627,44.8995,-107.0722
+"Wrangell City and Borough, Alaska",617,38.532,-99.3332
+"McCone, Montana",613,47.6452,-105.7953
+"Dickinson, Kansas",609,42.751,-93.3913
+"Platte, Nebraska",600,41.0281,-99.0869
+"Meade, South Dakota",600,39.9249,-96.4331
+"Teton, Montana",594,45.1772,-111.3461
+"Amite, Mississippi",589,31.1743,-90.8045
+"Haskell, Kansas",588,35.3218,-98.5725
+"Graham, Kansas",588,35.8777,-97.868
+"Rock, Nebraska",585,42.9225,-94.9247
+"Potter, South Dakota",585,40.7369,-93.2489
+"Valley, Nebraska",582,44.8995,-107.0722
+"Buffalo, Nebraska",573,43.1038,-96.6782
+"Hall, Nebraska",573,36.5736,-94.3344
+"Thomas, Nebraska",573,37.3761,-95.1765
+"McPherson, Nebraska",561,41.9087,-99.3097
+"Greeley, Nebraska",452,40.0241,-100.1637
+"Perkins, South Dakota",452,43.1705,-102.0624
+"Ravalli, Montana",436,46.0817,-114.1201
+"McCook, South Dakota",421,43.6743,-97.3685
+"Wichita, Kansas",420,36.2349,-100.0254
+"Wibaux, Montana",420,46.9656,-104.249
+"Divide, North Dakota",416,48.8149,-103.4871
+"Cascade, Montana",415,47.3082,-111.3474
+"Kidder, North Dakota",407,46.9801,-99.7801
+"Prairie, Montana",406,40.8453,-98.465
+"Hughes, South Dakota",406,39.7188,-98.1233
+"Roosevelt, Montana",400,41.1579,-104.2482
+"Hyde, South Dakota",392,40.0331,-87.8667
+"Aroostook, Maine",391,46.6591,-68.5987
+"Chase, Kansas",390,39.4129,-99.1461
+"Ramsey, North Dakota",390,46.6433,-95.91
+"Dixon, Nebraska",390,42.4935,-96.8683
+"Stanton, Kansas",388,39.74,-99.4891
+"Nuckolls, Nebraska",386,40.1764,-98.0474
+"Issaquena, Mississippi",386,32.7414,-90.989
+"Judith Basin, Montana",384,47.0452,-110.266
+"Foster, North Dakota",384,47.4571,-98.8828
+"Hamlin, South Dakota",383,44.6739,-97.1883
+"Ziebach, South Dakota",382,44.9806,-101.666
+"Sully, South Dakota",381,44.7154,-100.1319
+"Powder River, Montana",377,45.395,-105.63
+"Williams, North Dakota",372,44.952,-94.0341
+"Frontier, Nebraska",233,40.5302,-100.3937
+"Yellowstone, Montana",233,45.9372,-108.2743
+"Aurora, South Dakota",210,43.7181,-98.5618
+"Billings, North Dakota",209,47.0237,-103.3763
+"Wallace, Kansas",209,38.9169,-101.7637
+"Hanson, South Dakota",204,43.6746,-97.787
+"Fergus, Montana",204,47.2633,-109.2244
+"Brule, South Dakota",204,43.7182,-99.0813
+"Corson, South Dakota",203,45.7085,-101.1968
+"Oliver, North Dakota",203,47.1155,-101.3404
+"Doniphan, Kansas",203,39.788,-95.1468
+"Towner, North Dakota",203,48.6857,-99.2456
+"Dundy, Nebraska",200,40.1763,-101.6878
+"Stutsman, North Dakota",200,46.9793,-98.9589
+"Lyman, South Dakota",195,43.896,-99.8474
+"Lewis and Clark, Montana",195,47.1226,-112.3905
+"Stanley, South Dakota",191,44.4125,-100.7361
+"Fall River, South Dakota",190,43.2392,-103.5274
+"Hayes, Nebraska",187,40.5245,-101.0616
+"Cavalier, North Dakota",187,48.7724,-98.4647
+"Uinta, Wyoming",186,41.2875,-110.5474
+"Benson, North Dakota",186,48.0693,-99.3657
+"Treasure, Montana",183,46.2114,-107.2718
+"Sanborn, South Dakota",183,44.0235,-98.0911
+"Cherry, Nebraska",178,42.545,-101.1185

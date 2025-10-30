@@ -1,0 +1,418 @@
+county,total_patients
+"Washington, Vermont",43090
+"Lincoln, Wyoming",24192
+"Washington, Maine",19592
+"Franklin, Vermont",15158
+"Franklin, Maine",15002
+"Lincoln, Maine",14904
+"Johnson, Wyoming",14520
+"Cumberland, Maine",12224
+"Greene, Iowa",12208
+"Jefferson, Kansas",10946
+"Hancock, Maine",10360
+"Franklin, Nebraska",10322
+"Franklin, Kansas",10218
+"Montgomery, Mississippi",7362
+"Essex, Vermont",7330
+"Clay, Mississippi",7308
+"Clay, Iowa",7038
+"Clay, Kansas",6858
+"Marion, Iowa",6766
+"Washington, Iowa",6510
+"Marion, Mississippi",6477
+"York, Maine",6270
+"Washington, Nebraska",6076
+"Washington, Kansas",6045
+"Custer, Montana",5922
+"Grant, South Dakota",5895
+"Greene, Mississippi",5894
+"Grant, North Dakota",5775
+"Washington, Mississippi",5518
+"Taylor, Iowa",5481
+"Lake, Montana",5376
+"Knox, Maine",5319
+"Jefferson, Iowa",5278
+"Johnson, Kansas",5196
+"Lincoln, Kansas",5040
+"Lincoln, South Dakota",5040
+"Jefferson, Nebraska",4888
+"Adams, Nebraska",4860
+"Somerset, Maine",4812
+"Polk, Iowa",4812
+"Douglas, Kansas",4716
+"Lee, Mississippi",4668
+"Jackson, Mississippi",4560
+"Jackson, South Dakota",4512
+"Fayette, Iowa",4455
+"Lake, South Dakota",4392
+"Jackson, Kansas",4392
+"Logan, Kansas",4290
+"Union, Mississippi",4194
+"Hancock, Mississippi",4140
+"Carter, Montana",4105
+"Logan, North Dakota",4040
+"Madison, Nebraska",4000
+"Sheridan, North Dakota",3945
+"Hamilton, Iowa",3940
+"Montgomery, Iowa",3870
+"Campbell, Wyoming",3865
+"Marion, Kansas",3842
+"Clay, Nebraska",3780
+"Union, South Dakota",3780
+"Custer, South Dakota",3762
+"Clay, South Dakota",3762
+"Orleans, Vermont",3729
+"Montgomery, Kansas",3654
+"Garfield, Montana",3642
+"Shelby, Iowa",3609
+"Union, Iowa",3600
+"Boone, Iowa",3496
+"Grant, Nebraska",3495
+"Mercer, North Dakota",3248
+"Sheridan, Wyoming",3175
+"Boone, Nebraska",3152
+"Wayne, Iowa",3008
+"Howard, Nebraska",3003
+"Orange, Vermont",2992
+"Decatur, Kansas",2935
+"Richland, North Dakota",2870
+"Warren, Mississippi",2772
+"Windham, Vermont",2712
+"Richland, Montana",2674
+"Carroll, Mississippi",2639
+"Phillips, Montana",2540
+"Scott, Kansas",2486
+"Nelson, North Dakota",2412
+"Douglas, South Dakota",2292
+"Garfield, Nebraska",2286
+"Douglas, Nebraska",2280
+"Hancock, Iowa",2260
+"Johnson, Nebraska",2244
+"Scott, Mississippi",2233
+"Oxford, Maine",2192
+"Crawford, Kansas",2145
+"Saline, Kansas",2100
+"Knox, Nebraska",2097
+"Dallas, Iowa",2045
+"Henry, Iowa",2030
+"Mitchell, Iowa",1925
+"Logan, Nebraska",1910
+"Sheridan, Montana",1905
+"Holmes, Mississippi",1872
+"Blaine, Montana",1864
+"Brown, Kansas",1827
+"Comanche, Kansas",1827
+"Brown, South Dakota",1800
+"Butler, Nebraska",1776
+"Benton, Mississippi",1746
+"Butler, Kansas",1720
+"Gray, Kansas",1682
+"Sherman, Nebraska",1648
+"Yukon-Koyukuk Census Area, Alaska",1639
+"Niobrara, Wyoming",1638
+"Wilson, Kansas",1624
+"Harding, South Dakota",1614
+"Albany, Wyoming",1604
+"Smith, Kansas",1604
+"Van Buren, Iowa",1592
+"Carbon, Wyoming",1576
+"Harrison, Mississippi",1568
+"Butler, Iowa",1560
+"Cherokee, Iowa",1528
+"Liberty, Montana",1508
+"Smith, Mississippi",1492
+"Fremont, Wyoming",1464
+"Sweetwater, Wyoming",1410
+"Penobscot, Maine",1393
+"Northwest Arctic Borough, Alaska",1385
+"Sioux, Iowa",1275
+"Broadwater, Montana",1255
+"Teton, Wyoming",1242
+"Burke, North Dakota",1239
+"Wright, Iowa",1239
+"Buffalo, South Dakota",1239
+"Osceola, Iowa",1236
+"Sagadahoc, Maine",1231
+"Park, Montana",1203
+"Butte, South Dakota",1200
+"Grand Isle, Vermont",1194
+"Sioux, North Dakota",1191
+"Jones, Iowa",1188
+"Steele, North Dakota",1168
+"Hardin, Iowa",1164
+"Platte, Wyoming",1158
+"Lafayette, Mississippi",1146
+"Crook, Wyoming",1144
+"Lauderdale, Mississippi",1143
+"Cedar, Nebraska",1110
+"McLean, North Dakota",1107
+"York, Nebraska",1075
+"Addison, Vermont",1069
+"Androscoggin, Maine",1063
+"Haines Borough, Alaska",1043
+"Weston, Wyoming",1033
+"Sublette, Wyoming",1009
+"Campbell, South Dakota",1000
+"Bennington, Vermont",994
+"Aleutians East Borough, Alaska",983
+"Natrona, Wyoming",981
+"Clarke, Iowa",975
+"Pierce, North Dakota",970
+"Lyon, Iowa",970
+"Lyon, Kansas",970
+"Rutland, Vermont",968
+"Caledonia, Vermont",967
+"Converse, Wyoming",964
+"Pierce, Nebraska",930
+"Phillips, Kansas",860
+"Carbon, Montana",840
+"Prince of Wales-Hyder Census Area, Alaska",838
+"Stillwater, Montana",837
+"Linn, Kansas",836
+"Hot Springs, Wyoming",835
+"Kusilvak Census Area, Alaska",831
+"Dawson, Nebraska",816
+"Blaine, Nebraska",816
+"Hutchinson, South Dakota",814
+"Lake and Peninsula Borough, Alaska",808
+"Boyd, Nebraska",806
+"Washakie, Wyoming",805
+"Southeast Fairbanks Census Area, Alaska",800
+"Dodge, Nebraska",800
+"Eddy, North Dakota",798
+"Linn, Iowa",792
+"Waldo, Maine",786
+"Perkins, Nebraska",784
+"Windsor, Vermont",776
+"Powell, Montana",776
+"Roberts, South Dakota",774
+"Nome Census Area, Alaska",773
+"Harlan, Nebraska",772
+"Laramie, Wyoming",771
+"Chugach Census Area, Alaska",771
+"Norton, Kansas",768
+"Seward, Nebraska",768
+"Wells, North Dakota",764
+"Lancaster, Nebraska",764
+"Wheeler, Nebraska",760
+"Pennington, South Dakota",756
+"Walworth, South Dakota",748
+"Kiowa, Kansas",699
+"Edwards, Kansas",678
+"Park, Wyoming",678
+"Stone, Mississippi",666
+"Goshen, Wyoming",659
+"Hettinger, North Dakota",657
+"Keya Paha, Nebraska",651
+"Morrill, Nebraska",650
+"Sitka City and Borough, Alaska",647
+"Beaverhead, Montana",646
+"Tama, Iowa",637
+"Miner, South Dakota",635
+"Piscataquis, Maine",633
+"Petersburg Borough, Alaska",633
+"Valley, Montana",627
+"Anchorage Municipality, Alaska",621
+"Minnehaha, South Dakota",620
+"Yakutat City and Borough, Alaska",617
+"Wrangell City and Borough, Alaska",617
+"McCone, Montana",613
+"Chittenden, Vermont",613
+"Dickinson, Kansas",609
+"Wapello, Iowa",603
+"Dawes, Nebraska",602
+"Kennebec, Maine",601
+"Forrest, Mississippi",600
+"Platte, Nebraska",600
+"Fallon, Montana",600
+"Todd, South Dakota",600
+"Meade, South Dakota",600
+"Bethel Census Area, Alaska",594
+"Teton, Montana",594
+"Traill, North Dakota",593
+"Dillingham Census Area, Alaska",591
+"Amite, Mississippi",589
+"Winnebago, Iowa",588
+"Haskell, Kansas",588
+"Graham, Kansas",588
+"McIntosh, North Dakota",585
+"Rock, Nebraska",585
+"Potter, South Dakota",585
+"Valley, Nebraska",582
+"Buffalo, Nebraska",573
+"Pawnee, Nebraska",573
+"Hall, Nebraska",573
+"Thomas, Nebraska",573
+"Ketchikan Gateway Borough, Alaska",572
+"Barber, Kansas",572
+"Bristol Bay Borough, Alaska",568
+"Kodiak Island Borough, Alaska",565
+"Kenai Peninsula Borough, Alaska",562
+"Lamoille, Vermont",562
+"McPherson, Nebraska",561
+"Pawnee, Kansas",561
+"Osage, Kansas",549
+"Worth, Iowa",534
+"Emmet, Iowa",466
+"Harper, Kansas",466
+"Rice, Kansas",466
+"Panola, Mississippi",466
+"Greeley, Nebraska",452
+"Perkins, South Dakota",452
+"Atchison, Kansas",452
+"Chickasaw, Iowa",444
+"Deuel, South Dakota",444
+"Beadle, South Dakota",437
+"Ravalli, Montana",436
+"Kimball, Nebraska",424
+"Daniels, Montana",424
+"Coffey, Kansas",424
+"Appanoose, Iowa",424
+"Merrick, Nebraska",422
+"McCook, South Dakota",421
+"Flathead, Montana",420
+"Barnes, North Dakota",420
+"Wichita, Kansas",420
+"Wibaux, Montana",420
+"Walsh, North Dakota",420
+"Rawlins, Kansas",420
+"Red Willow, Nebraska",419
+"Divide, North Dakota",416
+"Cascade, Montana",415
+"Wheatland, Montana",415
+"Antelope, Nebraska",410
+"Kidder, North Dakota",407
+"Fillmore, Nebraska",406
+"Prairie, Montana",406
+"Holt, Nebraska",406
+"Hughes, South Dakota",406
+"Dakota, Nebraska",406
+"Pontotoc, Mississippi",406
+"Sargent, North Dakota",405
+"Griggs, North Dakota",405
+"Deer Lodge, Montana",404
+"Grand Forks, North Dakota",403
+"Denali Borough, Alaska",403
+"Gregory, South Dakota",401
+"Jefferson Davis, Mississippi",400
+"Quitman, Mississippi",400
+"Kingman, Kansas",400
+"Turner, South Dakota",400
+"Roosevelt, Montana",400
+"Trego, Kansas",399
+"Big Horn, Montana",396
+"Thurston, Nebraska",396
+"Tunica, Mississippi",393
+"Copper River Census Area, Alaska",392
+"Hyde, South Dakota",392
+"Itawamba, Mississippi",392
+"Aroostook, Maine",391
+"Nemaha, Nebraska",390
+"Pottawatomie, Kansas",390
+"Chase, Kansas",390
+"Ramsey, North Dakota",390
+"Dixon, Nebraska",390
+"Buena Vista, Iowa",390
+"Stanton, Kansas",388
+"Nuckolls, Nebraska",386
+"Issaquena, Mississippi",386
+"Judith Basin, Montana",384
+"Foster, North Dakota",384
+"Hamlin, South Dakota",383
+"Ziebach, South Dakota",382
+"Davison, South Dakota",382
+"Louisa, Iowa",382
+"Sully, South Dakota",381
+"Silver Bow, Montana",381
+"Greenwood, Kansas",380
+"Tippah, Mississippi",377
+"Powder River, Montana",377
+"Pocahontas, Iowa",376
+"Faulk, South Dakota",376
+"Dunn, North Dakota",374
+"Davis, Iowa",374
+"North Slope Borough, Alaska",373
+"Williams, North Dakota",372
+"Meagher, Montana",369
+"Chautauqua, Kansas",366
+"Big Horn, Wyoming",366
+"McKenzie, North Dakota",233
+"Sac, Iowa",233
+"Frontier, Nebraska",233
+"Yellowstone, Montana",233
+"Rankin, Mississippi",233
+"Edmunds, South Dakota",233
+"Pearl River, Mississippi",226
+"Des Moines, Iowa",226
+"Leflore, Mississippi",226
+"Oktibbeha, Mississippi",222
+"Ida, Iowa",222
+"Brookings, South Dakota",222
+"Finney, Kansas",222
+"Tate, Mississippi",222
+"Emmons, North Dakota",222
+"Mellette, South Dakota",210
+"Aurora, South Dakota",210
+"Billings, North Dakota",209
+"Republic, Kansas",209
+"Wallace, Kansas",209
+"Scotts Bluff, Nebraska",209
+"Winneshiek, Iowa",209
+"Rosebud, Montana",204
+"Hanson, South Dakota",204
+"Neshoba, Mississippi",204
+"Labette, Kansas",204
+"Fergus, Montana",204
+"Brule, South Dakota",204
+"Cerro Gordo, Iowa",204
+"Mahaska, Iowa",203
+"Woodson, Kansas",203
+"Grenada, Mississippi",203
+"Tripp, South Dakota",203
+"Corson, South Dakota",203
+"Oliver, North Dakota",203
+"Doniphan, Kansas",203
+"Towner, North Dakota",203
+"Cowley, Kansas",203
+"Allamakee, Iowa",200
+"Dundy, Nebraska",200
+"Prentiss, Mississippi",200
+"Stutsman, North Dakota",200
+"Codington, South Dakota",200
+"O'Brien, Iowa",196
+"Sunflower, Mississippi",196
+"Lyman, South Dakota",195
+"Lewis and Clark, Montana",195
+"Audubon, Iowa",195
+"Fairbanks North Star Borough, Alaska",194
+"Aleutians West Census Area, Alaska",191
+"Kearny, Kansas",191
+"Copiah, Mississippi",191
+"Keith, Nebraska",191
+"Palo Alto, Iowa",191
+"Story, Iowa",191
+"Musselshell, Montana",191
+"Stanley, South Dakota",191
+"Hand, South Dakota",190
+"Yankton, South Dakota",190
+"Ransom, North Dakota",190
+"Fall River, South Dakota",190
+"Walthall, Mississippi",188
+"Hayes, Nebraska",187
+"Bremer, Iowa",187
+"Ness, Kansas",187
+"Cavalier, North Dakota",187
+"Jerauld, South Dakota",187
+"Hoonah-Angoon Census Area, Alaska",186
+"Rooks, Kansas",186
+"Attala, Mississippi",186
+"Uinta, Wyoming",186
+"Benson, North Dakota",186
+"Day, South Dakota",183
+"Treasure, Montana",183
+"Sanborn, South Dakota",183
+"Gage, Nebraska",183
+"Sweet Grass, Montana",183
+"Cherry, Nebraska",178
+"Glacier, Montana",178
+"Spink, South Dakota",178
