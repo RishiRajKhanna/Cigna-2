@@ -293,8 +293,7 @@ def analyze_cluster():
     }
     
     # Analyze by different subgroups
-    subgroup_columns = ['gender', 'marital_status', 'ethnicity', 'is_senior_citizen', 
-                        'is_pregnant', 'has_chronic_illness', 'has_college_degree']
+    subgroup_columns = ['marital_status', 'is_senior_citizen', 'is_pregnant', 'has_chronic_illness']
     
     for col in subgroup_columns:
         if col in cluster_data.columns:
