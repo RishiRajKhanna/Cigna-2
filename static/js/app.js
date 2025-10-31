@@ -414,6 +414,13 @@ function loadPharmacySuggestions() {
 
 function displayPharmacySuggestions(pageItems) {
     const suggestionsGrid = document.getElementById('suggestions-list');
+    if (!suggestionsGrid) return;
+
+    if (pageItems.length === 0) {
+        suggestionsGrid.innerHTML = '<p class="muted">No pharmacy deserts found based on the 20-mile rule.</p>';
+        return;
+    }
+
     suggestionsGrid.innerHTML = pageItems.map((suggestion) => {
         const checked = selectedIndices.has(suggestion._index) ? 'checked' : '';
         const selectedClass = selectedIndices.has(suggestion._index) ? ' selected' : '';
@@ -422,8 +429,8 @@ function displayPharmacySuggestions(pageItems) {
             <input type="checkbox" class="suggestion-checkbox" data-index="${suggestion._index}" data-cost="${suggestion.estimated_cost}" ${checked} onclick="event.stopPropagation();">
             <div>
                 <h4>📍 ${suggestion.county}</h4>
-                <p class="muted"><strong>Patients:</strong> ${Number(suggestion.potential_patients || 0).toLocaleString()} • <strong>Coords:</strong> ${(suggestion.latitude||0).toFixed(4)}, ${(suggestion.longitude||0).toFixed(4)}</p>
-                <p class="cost">$${Number(suggestion.estimated_cost || 0).toLocaleString()}</p>
+                <p class="muted"><strong>Patients:</strong> ${Number(suggestion.potential_patients || 0).toLocaleString()} • <strong>Distance:</strong> ${suggestion.avg_distance ? suggestion.avg_distance.toFixed(2) + ' mi' : 'N/A'}</p>
+                <p class="cost">Est. Cost: $${Number(suggestion.estimated_cost || 0).toLocaleString()}</p>
             </div>
             <div>
                 <button class="btn-primary btn-small" onclick="event.stopPropagation(); toggleSuggestion(${suggestion._index}, ${suggestion.latitude}, ${suggestion.longitude})">Highlight</button>

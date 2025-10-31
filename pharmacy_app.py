@@ -147,6 +147,18 @@ except Exception as e:
     print(f"✗ Error loading pharmacy suggestions: {e}")
     pharmacy_suggestions_df = pd.DataFrame()
 
+# Load the new county distances data
+try:
+    county_distances_path = os.path.join(BASE_DIR, 'county_pharmacy_distances.csv')
+    county_distances_df = pd.read_csv(county_distances_path)
+    print(f"✓ Loaded county pharmacy distances: {len(county_distances_df)} rows")
+except FileNotFoundError:
+    print(f"✗ County pharmacy distances file not found: {county_distances_path}")
+    county_distances_df = pd.DataFrame()
+except Exception as e:
+    print(f"✗ Error loading county pharmacy distances: {e}")
+    county_distances_df = pd.DataFrame()
+
 print(f"\n=== Data Loading Summary ===")
 print(f"Patient data rows: {len(patient_data_df)}")
 print(f"Unique counties: {len(unique_county_names)}")
@@ -238,25 +250,7 @@ def find_pharmacies():
         'user_coords': {'lat': user_lat, 'lon': user_lon}
     })
 
-@app.route('/api/desert_counties')
-def get_desert_counties():
-    if top_13_counties.empty:
-        return jsonify({'counties': [], 'total_desert_population': 0})
-    
-    counties_data = []
-    for idx, row in top_13_counties.iterrows():
-        counties_data.append({
-            'county': row['county'],
-            'total_patients': int(row['total_patients']),
-            'desert_population': float(row['fictitious_desert_population'])
-        })
-    
-    total_desert_pop = float(top_13_counties['fictitious_desert_population'].sum())
-    
-    return jsonify({
-        'counties': counties_data,
-        'total_desert_population': total_desert_pop
-    })
+
 
 # --- TAB 2: Cluster Analysis API ---
 @app.route('/api/clusters')
@@ -374,72 +368,99 @@ def get_pharmacy_deserts():
     })
 
 @app.route('/api/pharmacy_suggestions')
+
 def get_pharmacy_suggestions():
-    """Get suggested pharmacy locations from pre-computed suggestions"""
-    if not pharmacy_suggestions_df.empty:
-        # Use pre-computed suggestions from CSV
-        suggestions = []
-        for _, row in pharmacy_suggestions_df.iterrows():
-            # Map the CSV columns to expected format
-            potential_patients = int(row.get('desert_population', row.get('potential_patients', 0)))
-            # Prefer county geo-centroids over CSV lat/lon
-            county_label = str(row.get('county', 'Unknown'))
-            if county_label in avg_county_coords:
-                lat = float(avg_county_coords[county_label]['latitude'])
-                lon = float(avg_county_coords[county_label]['longitude'])
-            else:
-                lat = float(row.get('suggested_latitude', row.get('latitude', 0)))
-                lon = float(row.get('suggested_longitude', row.get('longitude', 0)))
-            
-            # Calculate cost based on patient volume
-            base_cost = 500000
-            patient_multiplier = potential_patients * 1000
-            estimated_cost = base_cost + patient_multiplier
-            
-            suggestions.append({
-                'county': str(row.get('county', 'Unknown')),
-                'latitude': lat,
-                'longitude': lon,
-                'potential_patients': potential_patients,
-                'estimated_cost': estimated_cost
-            })
-        
-        return jsonify({'suggestions': suggestions})
-    
-    # Generate basic suggestions from desert areas if file not available
-    if patient_data_df.empty:
+
+    """Generate pharmacy suggestions based on the new county-level desert data."""
+
+    if county_distances_df.empty or patient_data_df.empty:
+
         return jsonify({'suggestions': []})
-    
-    desert_data = patient_data_df[patient_data_df['distance_to_nearest_pharmacy_miles'] > 10].copy()
-    county_centers = desert_data.groupby(['us_county', 'us_state']).agg({
-        'latitude': 'mean',
-        'longitude': 'mean',
-        'patient_id': 'count'
-    }).reset_index()
-    
-    county_centers = county_centers.sort_values('patient_id', ascending=False).head(15)
-    
+
+
+
+    # 1. Identify desert counties
+
+    desert_counties_df = county_distances_df[county_distances_df['distance_to_nearest_pharmacy'] >= 20].copy()
+
+
+
+    if desert_counties_df.empty:
+
+        return jsonify({'suggestions': []})
+
+
+
+    # 2. Calculate affected patient counts
+
+    patient_data_df['us_county_lower'] = patient_data_df['us_county'].str.lower().str.strip()
+
+    patient_data_df['us_state_lower'] = patient_data_df['us_state'].str.lower().str.strip()
+
+    desert_counties_df['us_county_lower'] = desert_counties_df['us_county'].str.lower().str.strip()
+
+    desert_counties_df['us_state_lower'] = desert_counties_df['us_state'].str.lower().str.strip()
+
+
+
+    patient_counts = patient_data_df.groupby(['us_county_lower', 'us_state_lower']).size().reset_index(name='potential_patients')
+
+
+
+    # 3. Merge desert counties with patient counts
+
+    merged_df = pd.merge(
+
+        desert_counties_df,
+
+        patient_counts,
+
+        on=['us_county_lower', 'us_state_lower'],
+
+        how='left'
+
+    )
+
+    merged_df['potential_patients'] = merged_df['potential_patients'].fillna(0).astype(int)
+
+
+
+    # 4. Format suggestions
+
     suggestions = []
-    for idx, row in county_centers.iterrows():
-        # Estimate property cost (simplified)
-        base_cost = 500000
-        patient_multiplier = row['patient_id'] * 1000
-        estimated_cost = base_cost + patient_multiplier
+
+    for _, row in merged_df.iterrows():
+
+        potential_patients = row['potential_patients']
+
+        # Simple cost estimation formula
+
+        estimated_cost = 500000 + (potential_patients * 1000)
+
         
-        county_label = f"{row['us_county']}, {row['us_state']}"
-        # Use centroid if available, else fallback to grouped mean
-        centroid = avg_county_coords.get(county_label)
-        cent_lat = float(centroid['latitude']) if centroid else float(row['latitude'])
-        cent_lon = float(centroid['longitude']) if centroid else float(row['longitude'])
 
         suggestions.append({
-            'county': county_label,
-            'latitude': cent_lat,
-            'longitude': cent_lon,
-            'potential_patients': int(row['patient_id']),
-            'estimated_cost': int(estimated_cost)
+
+            'county': f"{row['us_county'].title()}, {row['us_state'].title()}",
+
+            'latitude': row['correct_county_lat'],
+
+            'longitude': row['correct_county_lon'],
+
+            'potential_patients': potential_patients,
+
+            'estimated_cost': estimated_cost
+
         })
-    
+
+
+
+    # Sort by potential patients, descending
+
+    suggestions = sorted(suggestions, key=lambda x: x['potential_patients'], reverse=True)
+
+
+
     return jsonify({'suggestions': suggestions})
 
 # --- TAB 4: File Upload & ML Prediction API ---
