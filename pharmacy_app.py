@@ -297,21 +297,38 @@ def analyze_cluster():
     
     for col in subgroup_columns:
         if col in cluster_data.columns:
+            subgroup_list = []
             subgroup_stats = cluster_data.groupby(col)['distance_to_nearest_pharmacy_miles'].agg([
                 ('count', 'count'),
                 ('avg_distance', 'mean'),
                 ('median_distance', 'median')
             ]).reset_index()
-            
-            analysis['subgroups'][col] = [
-                {
-                    'value': str(row[col]),
+
+            for _, row in subgroup_stats.iterrows():
+                subgroup_value = row[col]
+                sub_cluster_data = cluster_data[cluster_data[col] == subgroup_value]
+                
+                age_illness_dist = sub_cluster_data.groupby(['age', 'has_chronic_illness']).size().unstack(fill_value=0)
+                if True not in age_illness_dist.columns:
+                    age_illness_dist[True] = 0
+                if False not in age_illness_dist.columns:
+                    age_illness_dist[False] = 0
+                age_illness_dist = age_illness_dist.reset_index().sort_values('age')
+
+                subgroup_list.append({
+                    'value': str(subgroup_value),
                     'count': int(row['count']),
                     'avg_distance': round(float(row['avg_distance']), 2),
-                    'median_distance': round(float(row['median_distance']), 2)
-                }
-                for _, row in subgroup_stats.iterrows()
-            ]
+                    'median_distance': round(float(row['median_distance']), 2),
+                    'age_distribution': {
+                        'ages': age_illness_dist['age'].tolist(),
+                        'with_illness': age_illness_dist[True].tolist(),
+                        'without_illness': age_illness_dist[False].tolist(),
+                        'with_illness_count': int(age_illness_dist[True].sum()),
+                        'without_illness_count': int(age_illness_dist[False].sum())
+                    }
+                })
+            analysis['subgroups'][col] = subgroup_list
     
     return jsonify(analysis)
 

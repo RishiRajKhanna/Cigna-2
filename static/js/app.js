@@ -211,8 +211,7 @@ function displayClusterAnalysis(data) {
 
     // Show first subgroup by default
     if (subgroupKeys.length > 0) {
-        showSubgroup(subgroupKeys[0], data.subgroups);
-        createClusterChart(subgroupKeys[0], data.subgroups);
+        showSubgroup(subgroupKeys[0], data.subgroups, document.querySelector('.subtab-btn'));
     }
 }
 
@@ -232,62 +231,90 @@ function showSubgroup(key, subgroups, clickedButton) {
 
     content.innerHTML = `
         <h4>${formatSubgroupName(key)} Analysis</h4>
+        <p class="muted">Click on a row to see the age distribution for that group.</p>
         <table style="width: 100%; margin-top: 15px;">
             <thead>
                 <tr>
                     <th>${formatSubgroupName(key)}</th>
                     <th>Patient Count</th>
                     <th>Avg Distance (miles)</th>
-                    <th>Median Distance (miles)</th>
+                    <th>With Illness</th>
+                    <th>Without Illness</th>
                 </tr>
             </thead>
             <tbody>
-                ${subgroupData.map(item => `
-                    <tr>
+                ${subgroupData.map((item, index) => `
+                    <tr class="subgroup-row" data-key="${key}" data-index="${index}">
                         <td>${item.value}</td>
                         <td>${item.count.toLocaleString()}</td>
                         <td>${item.avg_distance}</td>
-                        <td>${item.median_distance}</td>
+                        <td>${item.age_distribution ? item.age_distribution.with_illness_count.toLocaleString() : 'N/A'}</td>
+                        <td>${item.age_distribution ? item.age_distribution.without_illness_count.toLocaleString() : 'N/A'}</td>
                     </tr>
                 `).join('')}
             </tbody>
         </table>
     `;
-    
-    // Update chart for the selected subgroup
-    createClusterChart(key, subgroups);
+
+    // Add click listeners to rows
+    document.querySelectorAll('.subgroup-row').forEach(row => {
+        row.addEventListener('click', () => {
+            const k = row.getAttribute('data-key');
+            const i = parseInt(row.getAttribute('data-index'));
+            const itemData = subgroups[k][i];
+            if (itemData && itemData.age_distribution) {
+                createAgeDistributionChart(itemData.age_distribution, itemData.value);
+            }
+            document.querySelectorAll('.subgroup-row').forEach(r => r.classList.remove('active'));
+            row.classList.add('active');
+        });
+    });
+
+    // Show chart for the first item by default
+    if (subgroupData.length > 0 && subgroupData[0].age_distribution) {
+        createAgeDistributionChart(subgroupData[0].age_distribution, subgroupData[0].value);
+        document.querySelector('.subgroup-row').classList.add('active');
+    }
 }
 
-function createClusterChart(subgroupKey, subgroups) {
-    const ctx = document.getElementById('cluster-chart');
-    
-    // Destroy existing chart
+function createAgeDistributionChart(data, subgroupValue) {
+    const ctx = document.getElementById('cluster-chart').getContext('2d');
     if (clusterChart) {
         clusterChart.destroy();
     }
 
-    // Get the selected subgroup data
-    const subgroupData = subgroups[subgroupKey];
-    const subgroupName = formatSubgroupName(subgroupKey);
-    
     clusterChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: subgroupData.map(item => item.value),
-            datasets: [{
-                label: 'Average Distance (miles)',
-                data: subgroupData.map(item => item.avg_distance),
-                backgroundColor: 'rgba(37, 99, 235, 0.6)',
-                borderColor: 'rgba(37, 99, 235, 1)',
-                borderWidth: 2
-            }]
+            labels: data.ages,
+            datasets: [
+                {
+                    label: 'With Chronic Illness',
+                    data: data.with_illness,
+                    borderColor: 'rgba(239, 68, 68, 0.8)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                },
+                {
+                    label: 'Without Chronic Illness',
+                    data: data.without_illness,
+                    borderColor: 'rgba(37, 99, 235, 0.8)',
+                    backgroundColor: 'rgba(37, 99, 235, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }
+            ]
         },
         options: {
             responsive: true,
             plugins: {
                 title: {
                     display: true,
-                    text: `Distance Analysis by ${subgroupName}`
+                    text: `Patient Age Distribution for ${subgroupValue}`
+                },
+                legend: {
+                    position: 'top'
                 }
             },
             scales: {
@@ -295,13 +322,13 @@ function createClusterChart(subgroupKey, subgroups) {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Average Distance (miles)'
+                        text: 'Number of Patients'
                     }
                 },
                 x: {
                     title: {
                         display: true,
-                        text: subgroupName
+                        text: 'Age'
                     }
                 }
             }
