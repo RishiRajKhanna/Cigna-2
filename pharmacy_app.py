@@ -57,8 +57,8 @@ def load_county_data(file_path):
                     full_county_name = f"{county_name}, {state_name}"
                     norm_key = f"{county_name.lower()}, {state_name.lower()}"
                     
-                    latitude = float(row.get('latitude', 0))
-                    longitude = float(row.get('longitude', 0))
+                    latitude = float(row.get('correct_county_lat', 0))
+                    longitude = float(row.get('correct_county_lon', 0))
 
                     county_coords[full_county_name]['latitudes'].append(latitude)
                     county_coords[full_county_name]['longitudes'].append(longitude)
@@ -87,7 +87,7 @@ def load_county_data(file_path):
 
 # Load county data at app startup (use paths relative to this file)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-county_data_file = os.path.join(BASE_DIR, 'synthetic_patient_data_with_distances.csv')
+county_data_file = os.path.join(BASE_DIR, 'patient_data_with_imputed_distances.csv')
 avg_county_coords, unique_county_names = load_county_data(county_data_file)
 
 # If the primary file isn't found or results are empty, try a secondary known filename
@@ -279,10 +279,10 @@ def analyze_cluster():
     analysis = {
         'cluster': selected_cluster,
         'total_patients': int(len(cluster_data)),
-        'avg_distance': float(cluster_data['distance_to_nearest_pharmacy_miles'].mean()),
-        'median_distance': float(cluster_data['distance_to_nearest_pharmacy_miles'].median()),
-        'max_distance': float(cluster_data['distance_to_nearest_pharmacy_miles'].max()),
-        'min_distance': float(cluster_data['distance_to_nearest_pharmacy_miles'].min()),
+        'avg_distance': float(cluster_data['distance_to_nearest_pharmacy'].mean()),
+        'median_distance': float(cluster_data['distance_to_nearest_pharmacy'].median()),
+        'max_distance': float(cluster_data['distance_to_nearest_pharmacy'].max()),
+        'min_distance': float(cluster_data['distance_to_nearest_pharmacy'].min()),
         'subgroups': {}
     }
     
@@ -333,7 +333,7 @@ def get_pharmacy_deserts():
     if patient_data_df.empty:
         return jsonify({'desert_counties': [], 'total_affected': 0, 'avg_distance': 0})
     
-    desert_data = patient_data_df[patient_data_df['distance_to_nearest_pharmacy_miles'] > 10].copy()
+    desert_data = patient_data_df[patient_data_df['distance_to_nearest_pharmacy'] >= 20].copy()
     
     if desert_data.empty:
         return jsonify({'desert_counties': [], 'total_affected': 0, 'avg_distance': 0})
@@ -341,8 +341,8 @@ def get_pharmacy_deserts():
     county_stats = desert_data.groupby(['us_county', 'us_state']).agg({
         'patient_id': 'count',
         'distance_to_nearest_pharmacy_miles': 'mean',
-        'latitude': 'mean',
-        'longitude': 'mean'
+        'correct_county_lat': 'mean',
+        'correct_county_lon': 'mean'
     }).reset_index()
     
     county_stats.columns = ['county', 'state', 'affected_patients', 'avg_distance', 'latitude', 'longitude']
@@ -574,9 +574,9 @@ def predict_pharmacy():
             stats['avg_children'] = round(float(uploaded_df['number_of_children'].mean()), 2)
         
         # Existing distance statistics (if available)
-        if 'distance_to_nearest_pharmacy_miles' in uploaded_df.columns:
-            stats['avg_distance'] = round(float(uploaded_df['distance_to_nearest_pharmacy_miles'].mean()), 2)
-            stats['median_distance'] = round(float(uploaded_df['distance_to_nearest_pharmacy_miles'].median()), 2)
+        if 'distance_to_nearest_pharmacy' in uploaded_df.columns:
+            stats['avg_distance'] = round(float(uploaded_df['distance_to_nearest_pharmacy'].mean()), 2)
+            stats['median_distance'] = round(float(uploaded_df['distance_to_nearest_pharmacy'].median()), 2)
         
         # ==================== ML MODEL PREDICTION ====================
         predictions = []
