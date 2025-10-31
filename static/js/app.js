@@ -753,9 +753,10 @@ function displayUploadResults(data) {
     }
 }
 
+
+
 function createGenderChart(genderData) {
-    const ctx = document.getElementById('gender-chart');
-    
+    const ctx = document.getElementById('gender-chart').getContext('2d');
     if (genderChart) {
         genderChart.destroy();
     }
